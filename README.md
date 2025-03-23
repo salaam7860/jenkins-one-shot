@@ -2,7 +2,7 @@
 
 ## Installation
 ### Pre-requisite 
-- Java openjdk-21-jdk
+- Java openjdk-17-jdk
 
 ```
 sudo apt update
