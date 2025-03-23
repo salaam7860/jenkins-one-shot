@@ -32,24 +32,6 @@ sudo systemctl start jenkins
 ```
 sudo systemctl enable jenkins
 ```
-###  To change the Jenkins default port from 8080 to any port, you can follow these steps:
 
-- Open the Jenkins configuration file in a text editor:
-  ```
-  # Stop the service 
-  sudo systemctl stop jenkins
-  
-  # Edit the file.
-  sudo vi /etc/default/jenkins
-  ```
-- Look for the HTTP_PORT variable and change its value to Any:
-    ```
-    HTTP_PORT=8081 #Any port no you want.
-    ```
-- Save and close the file.
-- Restart the Jenkins service:
-  ```
-  sudo service jenkins restart
-  ```
 
 
