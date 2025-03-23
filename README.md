@@ -36,11 +36,11 @@ sudo systemctl enable jenkins
 
 - Open the Jenkins configuration file in a text editor:
   ```
-  sudo nano /etc/default/jenkins
+  sudo vi /etc/default/jenkins
   ```
 - Look for the HTTP_PORT variable and change its value to Any:
     ```
-    HTTP_PORT=8081
+    HTTP_PORT=8081 # any port no you want.
     ```
 - Save and close the file.
 - Restart the Jenkins service:
