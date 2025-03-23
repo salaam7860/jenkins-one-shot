@@ -6,7 +6,7 @@
 
 ```
 sudo apt update
-sudo apt install openjdk-21-jdk
+sudo apt install openjdk-17-jdk
 ```
 ### Jenkins Installation Debian/Ubuntu
 ```
