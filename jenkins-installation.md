@@ -1,4 +1,4 @@
-# Jenkins in One Shot
+# Jenkins  
 
 ## Installation
 ### Pre-requisite 
