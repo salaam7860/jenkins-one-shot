@@ -36,6 +36,10 @@ sudo systemctl enable jenkins
 
 - Open the Jenkins configuration file in a text editor:
   ```
+  # Stop the service 
+  sudo systemctl stop jenkins
+  
+  # Edit the file.
   sudo vi /etc/default/jenkins
   ```
 - Look for the HTTP_PORT variable and change its value to Any:
