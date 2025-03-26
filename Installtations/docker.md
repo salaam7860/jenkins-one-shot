@@ -28,3 +28,14 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
+
+### Add the User to the Docker Group
+```
+sudo usermod -aG docker ${USER}
+```
+### Another solution is to change the ownership of the Docker socket to the current user.
+
+```bash
+sudo chown ${USER}:docker /var/run/docker.sock
+
+```
