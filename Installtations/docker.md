@@ -33,9 +33,30 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 sudo usermod -aG docker ${USER}
 ```
+
 ### Another solution is to change the ownership of the Docker socket to the current user.
 
 ```bash
 sudo chown ${USER}:docker /var/run/docker.sock
 
+```
+## If not working:
+### Check Docker Socket Permissions
+```bash
+ls -l /var/run/docker.sock
+```
+**If the group for /var/run/docker.sock is not docker, or if the permissions do not allow the Jenkins user to access it, you can update the permissions with:**
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
+###  Restart Jenkins and Docker
+```bash
+sudo systemctl restart jenkins
+sudo systemctl restart docker
+
+```
+### Test Docker Access
+```bash
+sudo -u jenkins docker ps
 ```
